@@ -1,0 +1,19 @@
+{
+  "name": "auto-herokuapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",  
+  "scripts": {
+    "startWithoutBrowser": "npx playwright test",
+    "startOpeningBrowser": "npx playwright test --headed",
+    "showReport": "npx playwright show-report",
+    "codegen": "npx playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.4"
+  }
+}
