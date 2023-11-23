@@ -4,6 +4,8 @@ const titlePage = {
     basicAuth: 'Basic Auth'
 };
 
-const btns = {
-    submit: 'Submit'
+const results = {
+    basicAuthTextSuccess: 'Congratulations! You must have the proper credentials.'
 }
+
+export {titlePage, results}
