@@ -8,5 +8,6 @@ export default {
     disappearingElements: 'https://the-internet.herokuapp.com/disappearing_elements',
     dragAndDrop: 'https://the-internet.herokuapp.com/drag_and_drop',
     select: 'https://the-internet.herokuapp.com/dropdown',
-    dynamicContent: 'https://the-internet.herokuapp.com/dynamic_content'
+    dynamicContent: 'https://the-internet.herokuapp.com/dynamic_content',
+    hovers: 'https://the-internet.herokuapp.com/hovers',
 }

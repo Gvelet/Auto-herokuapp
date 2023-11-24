@@ -2,7 +2,7 @@
   "name": "auto-herokuapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",  
+  "main": "index.js",
   "scripts": {
     "startWithoutBrowser": "npx playwright test",
     "startOpeningBrowser": "npx playwright test --headed",
@@ -14,6 +14,10 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
-    "@types/node": "^20.9.4"
+    "@types/node": "^20.9.4",
+    "jest-image-snapshot": "^6.2.0"
+  },
+  "dependencies": {
+    "test-jest": "^1.0.1"
   }
 }

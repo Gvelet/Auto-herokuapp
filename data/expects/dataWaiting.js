@@ -1,7 +1,8 @@
 const titlePage = {
     homePage: 'Welcome to the-internet',
     AddRemoveElements: 'Add/Remove Elements',
-    basicAuth: 'Basic Auth'
+    basicAuth: 'Basic Auth',
+    brokenImages: 'Broken Images',
 };
 
 const results = {
