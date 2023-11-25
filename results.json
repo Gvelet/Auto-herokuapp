@@ -1,0 +1,457 @@
+{
+  "config": {
+    "configFile": "C:\\playwright\\auto-herokuapp\\playwright.config.js",
+    "rootDir": "C:/playwright/auto-herokuapp/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
+        "C:\\playwright\\auto-herokuapp\\node_modules\\allure-playwright\\dist\\index.js",
+        {
+          "outputFolder": "allure-results"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/playwright/auto-herokuapp/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/playwright/auto-herokuapp/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.40.0",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "autorization\\basicAutk.spec.js",
+      "file": "autorization/basicAutk.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Проверка Базовой авторизации@regress @smoke",
+          "ok": true,
+          "tags": [
+            "regress",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2848,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-11-25T18:09:57.756Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26ee3fa0229356c9bf21-e2567c307886f8591e54",
+          "file": "autorization/basicAutk.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "imgs\\brokenImages.spec.js",
+      "file": "imgs/brokenImages.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Проверка изображений",
+          "file": "imgs/brokenImages.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Страница Broken Images@regress",
+              "ok": false,
+              "tags": [
+                "regress"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 3108,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Картинка с src: asdf.jpg сломана\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Картинка с src: asdf.jpg сломана\"\u001b[39m\n    at checkingImages (C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js:10:66)\n    at C:\\playwright\\auto-herokuapp\\tests\\imgs\\brokenImages.spec.js:11:9",
+                        "location": {
+                          "file": "C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js",
+                          "column": 66,
+                          "line": 10
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\components\\checkingImagesIntegrity.js:10\n\n\u001b[0m \u001b[90m  8 |\u001b[39m       \u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m       \u001b[36mif\u001b[39m (response\u001b[33m.\u001b[39mstatus() \u001b[33m!==\u001b[39m \u001b[35m200\u001b[39m) {          \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(\u001b[32m`Картинка с src: ${srcImages[i]} сломана`\u001b[39m)\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m       }\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   }\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js",
+                            "column": 66,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Картинка с src: asdf.jpg сломана\"\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\components\\checkingImagesIntegrity.js:10\n\n\u001b[0m \u001b[90m  8 |\u001b[39m       \u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m       \u001b[36mif\u001b[39m (response\u001b[33m.\u001b[39mstatus() \u001b[33m!==\u001b[39m \u001b[35m200\u001b[39m) {          \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(\u001b[32m`Картинка с src: ${srcImages[i]} сломана`\u001b[39m)\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m       }\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   }\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at checkingImages (C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js:10:66)\u001b[22m\n\u001b[2m    at C:\\playwright\\auto-herokuapp\\tests\\imgs\\brokenImages.spec.js:11:9\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js",
+                            "column": 66,
+                            "line": 10
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Картинка с src: hjkl.jpg сломана\"\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\components\\checkingImagesIntegrity.js:10\n\n\u001b[0m \u001b[90m  8 |\u001b[39m       \u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m       \u001b[36mif\u001b[39m (response\u001b[33m.\u001b[39mstatus() \u001b[33m!==\u001b[39m \u001b[35m200\u001b[39m) {          \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(\u001b[32m`Картинка с src: ${srcImages[i]} сломана`\u001b[39m)\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m       }\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   }\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at checkingImages (C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js:10:66)\u001b[22m\n\u001b[2m    at C:\\playwright\\auto-herokuapp\\tests\\imgs\\brokenImages.spec.js:11:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:09:57.702Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\playwright\\auto-herokuapp\\components\\checkingImagesIntegrity.js",
+                        "column": 66,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0881d0ce9f678d0d7d34-7ff87e896f26344f9fe3",
+              "file": "imgs/brokenImages.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "Страница Hovers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 3792,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:09:57.695Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0881d0ce9f678d0d7d34-0b8afac6e3acc37290f7",
+              "file": "imgs/brokenImages.spec.js",
+              "line": 14,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PageFileUploaded\\uploading.spec.js",
+      "file": "PageFileUploaded/uploading.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Загрузка валидных файлов по кнопке \"Выбрете файл\"@positiv",
+          "file": "PageFileUploaded/uploading.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Формат PNG@regress",
+              "ok": true,
+              "tags": [
+                "regress"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 6239,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:09:57.715Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5d1fcfcbec82cb34982-e896668d05985e38b2b2",
+              "file": "PageFileUploaded/uploading.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "Формат SVG@regress",
+              "ok": true,
+              "tags": [
+                "regress"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 3526,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:09:57.741Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5d1fcfcbec82cb34982-ae15d6a24ff748d472a5",
+              "file": "PageFileUploaded/uploading.spec.js",
+              "line": 20,
+              "column": 5
+            },
+            {
+              "title": "Формат webm",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 5972,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:09:57.733Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5d1fcfcbec82cb34982-08b7283137d4b63a191b",
+              "file": "PageFileUploaded/uploading.spec.js",
+              "line": 24,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Загрузка невалидных файлов по кнопке \"Выбрете файл\"@negativ",
+          "file": "PageFileUploaded/uploading.spec.js",
+          "line": 34,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Формат txt@nevalid",
+              "ok": true,
+              "tags": [
+                "nevalid"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 2901,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:10:01.360Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5d1fcfcbec82cb34982-6b25acfc90c347685789",
+              "file": "PageFileUploaded/uploading.spec.js",
+              "line": 38,
+              "column": 5
+            },
+            {
+              "title": "Без загрузки файла@nevalid",
+              "ok": false,
+              "tags": [
+                "nevalid"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "failed",
+                      "duration": 4689,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Статус код не 500\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Статус код не 500\"\u001b[39m\n    at C:\\playwright\\auto-herokuapp\\tests\\PageFileUploaded\\uploading.spec.js:54:41",
+                        "location": {
+                          "file": "C:\\playwright\\auto-herokuapp\\tests\\PageFileUploaded\\uploading.spec.js",
+                          "column": 41,
+                          "line": 54
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 52 |\u001b[39m             expect(statusCode)\u001b[33m.\u001b[39mtoBe(\u001b[35m500\u001b[39m)       \u001b[0m\n\u001b[0m \u001b[90m 53 |\u001b[39m         }\u001b[36melse\u001b[39m{\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m             expect(\u001b[32m'Статус код не 500'\u001b[39m)\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 55 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 56 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 57 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\playwright\\auto-herokuapp\\tests\\PageFileUploaded\\uploading.spec.js",
+                            "column": 41,
+                            "line": 54
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"Статус код не 500\"\u001b[39m\n\n\u001b[0m \u001b[90m 52 |\u001b[39m             expect(statusCode)\u001b[33m.\u001b[39mtoBe(\u001b[35m500\u001b[39m)       \u001b[0m\n\u001b[0m \u001b[90m 53 |\u001b[39m         }\u001b[36melse\u001b[39m{\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m             expect(\u001b[32m'Статус код не 500'\u001b[39m)\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 55 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 56 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 57 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\playwright\\auto-herokuapp\\tests\\PageFileUploaded\\uploading.spec.js:54:41\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-25T18:10:01.981Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\playwright\\auto-herokuapp\\tests\\PageFileUploaded\\uploading.spec.js",
+                        "column": 41,
+                        "line": 54
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a5d1fcfcbec82cb34982-d8b81016bf07b0330634",
+              "file": "PageFileUploaded/uploading.spec.js",
+              "line": 44,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2023-11-25T18:09:57.118Z",
+    "duration": 9901.911,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,80 @@
+<testsuites id="" name="" tests="8" failures="2" skipped="0" errors="0" time="9.782038">
+<testsuite name="autorization\basicAutk.spec.js" timestamp="2023-11-25T18:09:57.261Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.848" errors="0">
+<testcase name="Проверка Базовой авторизации@regress @smoke" classname="autorization\basicAutk.spec.js" time="2.848">
+</testcase>
+</testsuite>
+<testsuite name="imgs\brokenImages.spec.js" timestamp="2023-11-25T18:09:57.261Z" hostname="chromium" tests="2" failures="1" skipped="0" time="6.9" errors="0">
+<testcase name="Проверка изображений › Страница Broken Images@regress" classname="imgs\brokenImages.spec.js" time="3.108">
+<failure message="brokenImages.spec.js:8:5 Страница Broken Images@regress" type="FAILURE">
+<![CDATA[  [chromium] › imgs\brokenImages.spec.js:8:5 › Проверка изображений › Страница Broken Images@regress 
+
+    Error: expect(received).toBeFalsy()
+
+    Received: "Картинка с src: asdf.jpg сломана"
+
+       at ..\components\checkingImagesIntegrity.js:10
+
+       8 |       
+       9 |       if (response.status() !== 200) {          
+    > 10 |           expect.soft(`Картинка с src: ${srcImages[i]} сломана`).toBeFalsy();
+         |                                                                  ^
+      11 |       }
+      12 |   }
+      13 | }
+
+        at checkingImages (C:\playwright\auto-herokuapp\components\checkingImagesIntegrity.js:10:66)
+        at C:\playwright\auto-herokuapp\tests\imgs\brokenImages.spec.js:11:9
+
+    Error: expect(received).toBeFalsy()
+
+    Received: "Картинка с src: hjkl.jpg сломана"
+
+       at ..\components\checkingImagesIntegrity.js:10
+
+       8 |       
+       9 |       if (response.status() !== 200) {          
+    > 10 |           expect.soft(`Картинка с src: ${srcImages[i]} сломана`).toBeFalsy();
+         |                                                                  ^
+      11 |       }
+      12 |   }
+      13 | }
+
+        at checkingImages (C:\playwright\auto-herokuapp\components\checkingImagesIntegrity.js:10:66)
+        at C:\playwright\auto-herokuapp\tests\imgs\brokenImages.spec.js:11:9
+]]>
+</failure>
+</testcase>
+<testcase name="Проверка изображений › Страница Hovers" classname="imgs\brokenImages.spec.js" time="3.792">
+</testcase>
+</testsuite>
+<testsuite name="PageFileUploaded\uploading.spec.js" timestamp="2023-11-25T18:09:57.261Z" hostname="chromium" tests="5" failures="1" skipped="0" time="23.327" errors="0">
+<testcase name="Загрузка валидных файлов по кнопке &quot;Выбрете файл&quot;@positiv › Формат PNG@regress" classname="PageFileUploaded\uploading.spec.js" time="6.239">
+</testcase>
+<testcase name="Загрузка валидных файлов по кнопке &quot;Выбрете файл&quot;@positiv › Формат SVG@regress" classname="PageFileUploaded\uploading.spec.js" time="3.526">
+</testcase>
+<testcase name="Загрузка валидных файлов по кнопке &quot;Выбрете файл&quot;@positiv › Формат webm" classname="PageFileUploaded\uploading.spec.js" time="5.972">
+</testcase>
+<testcase name="Загрузка невалидных файлов по кнопке &quot;Выбрете файл&quot;@negativ › Формат txt@nevalid" classname="PageFileUploaded\uploading.spec.js" time="2.901">
+</testcase>
+<testcase name="Загрузка невалидных файлов по кнопке &quot;Выбрете файл&quot;@negativ › Без загрузки файла@nevalid" classname="PageFileUploaded\uploading.spec.js" time="4.689">
+<failure message="uploading.spec.js:44:5 Без загрузки файла@nevalid" type="FAILURE">
+<![CDATA[  [chromium] › PageFileUploaded\uploading.spec.js:44:5 › Загрузка невалидных файлов по кнопке "Выбрете файл"@negativ › Без загрузки файла@nevalid 
+
+    Error: expect(received).toBeFalsy()
+
+    Received: "Статус код не 500"
+
+      52 |             expect(statusCode).toBe(500)       
+      53 |         }else{
+    > 54 |             expect('Статус код не 500').toBeFalsy(); 
+         |                                         ^
+      55 |         }
+      56 |     });
+      57 |
+
+        at C:\playwright\auto-herokuapp\tests\PageFileUploaded\uploading.spec.js:54:41
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>

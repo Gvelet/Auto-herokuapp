@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "startRegressTest": "npx playwright test --grep @regress",
     "startWithoutBrowser": "npx playwright test",
     "startOpeningBrowser": "npx playwright test --headed",
     "showReport": "npx playwright show-report",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.9.4",
+    "allure-playwright": "^2.9.2",
     "jest-image-snapshot": "^6.2.0"
   },
   "dependencies": {

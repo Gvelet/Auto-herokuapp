@@ -10,4 +10,5 @@ export default {
     select: 'https://the-internet.herokuapp.com/dropdown',
     dynamicContent: 'https://the-internet.herokuapp.com/dynamic_content',
     hovers: 'https://the-internet.herokuapp.com/hovers',
+    uploadFile: 'https://the-internet.herokuapp.com/upload',
 }

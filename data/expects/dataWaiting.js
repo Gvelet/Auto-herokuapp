@@ -6,7 +6,8 @@ const titlePage = {
 };
 
 const results = {
-    basicAuthTextSuccess: 'Congratulations! You must have the proper credentials.'
+    basicAuthTextSuccess: 'Congratulations! You must have the proper credentials.',
+    fileUploaded: 'File Uploaded!',
 }
 
 export {titlePage, results}
