@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "reportAllure": "npx allure serve allure-results",
     "startRegressTest": "npx playwright test --grep @regress",
     "startWithoutBrowser": "npx playwright test",
     "startOpeningBrowser": "npx playwright test --headed",

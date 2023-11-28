@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+import { testPlanFilter } from "allure-playwright/dist/testplan";
 
 /**
  * Read environment variables from file.
@@ -18,14 +19,23 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
+  //retries: 2,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  grep: testPlanFilter(),
   reporter: [['html'],
              ['list'],
-             ['json', {outputFile: 'results.json'}],
-             ['junit', {outputFile: 'results.xml'}],
-             ['allure-playwright', {outputFolder: 'allure-results'}]
+            //  ['json', {outputFile: 'results.json'}],
+            // ['junit', {outputFile: 'results.xml'}],
+             ['allure-playwright',
+                {
+                  detail: true,
+                  outputFolder: 'allure-results',
+                  suiteTitle: true,
+
+                }
+             ]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -34,6 +44,7 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    video: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
