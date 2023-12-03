@@ -14,7 +14,7 @@ test('Проверка Базовой авторизации@regress @smoke', as
     await setTestInformation(allure, Severity, 'CRITICAL', 'Флаг', 'Проверка Базовой авторизации');
     await setTaskLinks(allure, "AUTH-123", "TMS-456");
     await setTestSuite(allure, "Проверка базовой авторизации на сайте", 'Smoke тест', 'Аутентификация');
-    await setTestEpic(allure, 'Эпик', 'Важно', 'story')
+    await setTestEpic(allure, 'Эпик', 'Важно', 'story');
 
     await basiсAuth(page);
     await page.goto(urlChapter.basicAuth);
